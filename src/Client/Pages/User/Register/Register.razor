@@ -1,0 +1,28 @@
+﻿@namespace hosted.Pages.User
+@layout UserLayout
+@page "/user/register"
+Model 
+
+<div class="main__b__1">
+    <div class="register">
+        <h3>Registration</h3>
+        <Form Model="@RegisterModel">
+            <FormItem>
+                <Input Placeholder="Email Address" @bind-Value="@RegisterModel.Email" Size="@InputSize.Large"></Input>
+            </FormItem>
+
+            <FormItem>
+                <Input Placeholder="At Least 6-Digit Password, Case Sensitive" @bind-Value="@RegisterModel.Password" Size="@InputSize.Large" Type="password"></Input>
+            </FormItem>
+
+            <FormItem>
+                <Input Placeholder="Confirm Password" @bind-Value="@RegisterModel.ConfirmPassword" Size="@InputSize.Large" Type="password"></Input>
+            </FormItem>
+
+            <FormItem>
+                <Button Type="primary" Size="large" OnClick="Reg" class="submit">Register</Button>
+                <a class="login" href="/user/login">Log in with an existing account</a>
+            </FormItem>
+        </Form>
+    </div>
+</div>
